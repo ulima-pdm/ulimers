@@ -8,7 +8,7 @@ public class Alumno {
     private String nombre;
     private String codigo;
     private int puntos;
-    private String urlFofo;
+    private String urlFoto;
 
     public Alumno() {
     }
@@ -18,7 +18,7 @@ public class Alumno {
         this.nombre = nombre;
         this.codigo = codigo;
         this.puntos = puntos;
-        this.urlFofo = urlFofo;
+        this.urlFoto = urlFofo;
     }
 
     public long getId() {
@@ -53,11 +53,11 @@ public class Alumno {
         this.puntos = puntos;
     }
 
-    public String getUrlFofo() {
-        return urlFofo;
+    public String getUrlFoto() {
+        return urlFoto;
     }
 
-    public void setUrlFofo(String urlFofo) {
-        this.urlFofo = urlFofo;
+    public void setUrlFoto(String urlFofo) {
+        this.urlFoto = urlFofo;
     }
 }

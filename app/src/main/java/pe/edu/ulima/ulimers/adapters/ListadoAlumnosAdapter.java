@@ -1,12 +1,15 @@
 package pe.edu.ulima.ulimers.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -20,8 +23,10 @@ public class ListadoAlumnosAdapter extends BaseAdapter {
 
     private LayoutInflater mInflater;
     private List<Alumno> mAlumnos;
+    private Context mContext;
 
     public ListadoAlumnosAdapter(Context context, List<Alumno> alumnos){
+        mContext = context;
         mInflater = LayoutInflater.from(context);
         mAlumnos = alumnos;
     }
@@ -60,6 +65,8 @@ public class ListadoAlumnosAdapter extends BaseAdapter {
 
         viewHolder.tviNombreAlumno.setText(alumno.getNombre());
         viewHolder.tviCodigoAlumno.setText(alumno.getCodigo());
+        Log.i("ULimers", alumno.getUrlFoto());
+        Picasso.with(mContext).load(alumno.getUrlFoto()).into(viewHolder.iviAlumnoFoto);
 
         return view;
     }
