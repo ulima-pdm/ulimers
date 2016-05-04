@@ -7,13 +7,13 @@ public class Alumno {
     private long id;
     private String nombre;
     private String codigo;
-    private String puntos;
+    private int puntos;
     private String urlFofo;
 
     public Alumno() {
     }
 
-    public Alumno(long id, String nombre, String codigo, String puntos, String urlFofo) {
+    public Alumno(long id, String nombre, String codigo, int puntos, String urlFofo) {
         this.id = id;
         this.nombre = nombre;
         this.codigo = codigo;
@@ -45,11 +45,11 @@ public class Alumno {
         this.codigo = codigo;
     }
 
-    public String getPuntos() {
+    public int getPuntos() {
         return puntos;
     }
 
-    public void setPuntos(String puntos) {
+    public void setPuntos(int puntos) {
         this.puntos = puntos;
     }
 
