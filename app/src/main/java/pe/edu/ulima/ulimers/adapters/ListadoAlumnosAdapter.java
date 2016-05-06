@@ -42,7 +42,7 @@ public class ListadoAlumnosAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
-        return mAlumnos.get(i).getId();
+        return 0;
     }
 
     @Override
@@ -66,7 +66,11 @@ public class ListadoAlumnosAdapter extends BaseAdapter {
         viewHolder.tviNombreAlumno.setText(alumno.getNombre());
         viewHolder.tviCodigoAlumno.setText(alumno.getCodigo());
         Log.i("ULimers", alumno.getUrlFoto());
-        Picasso.with(mContext).load(alumno.getUrlFoto()).into(viewHolder.iviAlumnoFoto);
+        Picasso.with(mContext)
+                .load(alumno.getUrlFoto())
+                .resize(200, 200)
+                .centerCrop()
+                .into(viewHolder.iviAlumnoFoto);
 
         return view;
     }

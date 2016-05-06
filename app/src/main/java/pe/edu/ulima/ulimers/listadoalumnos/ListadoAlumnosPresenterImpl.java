@@ -32,7 +32,7 @@ public class ListadoAlumnosPresenterImpl implements ListadoAlumnosPresenter{
 
         mView.mostrarListadoAlumnos(alumnos);*/
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://demo6396474.mockable.io")
+                .baseUrl("http://ulimers.mybluemix.net")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -4,7 +4,7 @@ package pe.edu.ulima.ulimers.beans;
  * Created by hquintana on 3/05/16.
  */
 public class Alumno {
-    private long id;
+    private String id;
     private String nombre;
     private String codigo;
     private int puntos;
@@ -13,7 +13,7 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Alumno(long id, String nombre, String codigo, int puntos, String urlFofo) {
+    public Alumno(String id, String nombre, String codigo, int puntos, String urlFofo) {
         this.id = id;
         this.nombre = nombre;
         this.codigo = codigo;
@@ -21,11 +21,11 @@ public class Alumno {
         this.urlFoto = urlFofo;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
